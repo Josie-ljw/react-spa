@@ -10,6 +10,7 @@ let defaultSettings = require('./defaults');
 let additionalPaths = [];
 
 module.exports = {
+
   postcss: function () {
     return [
       require('autoprefixer')({
@@ -17,6 +18,7 @@ module.exports = {
       })
     ];
   },
+
   additionalPaths: additionalPaths,
   port: defaultSettings.port,
   debug: true,
@@ -41,7 +43,9 @@ module.exports = {
       components: `${defaultSettings.srcPath}/components/`,
       sources: `${defaultSettings.srcPath}/sources/`,
       stores: `${defaultSettings.srcPath}/stores/`,
+      servers: `${defaultSettings.srcPath}/servers/`,
       styles: `${defaultSettings.srcPath}/styles/`,
+      reducers: `${defaultSettings.srcPath}/reducers/`,
       config: `${defaultSettings.srcPath}/config/` + process.env.REACT_WEBPACK_ENV,
       'react/lib/ReactMount': 'react-dom/lib/ReactMount'
     }
